@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22064"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:57:58 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzEwOjQ5OjUwIEFNOzMwNTM="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzEwOjU3OjU4IEFNOzE7MzE2OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A" type="Integer" array="False" size=""/>
+            <declare name="B" type="Integer" array="False" size=""/>
+            <comment text="VALUE OF A BEFORE SWAPPIMG"/>
+            <output expression="&quot;WHATB IS THGE VALUE OF A&quot;" newline="True"/>
+            <input variable="A"/>
+            <comment text="VALUE OF B BEFORE SWAPPING"/>
+            <output expression="&quot;WHAT IS THE VALUE OF B&quot;" newline="True"/>
+            <input variable="B"/>
+            <assign variable="B" expression="A*B"/>
+            <assign variable="A" expression="B/A"/>
+            <assign variable="B" expression="B/A"/>
+            <comment text="THE A &amp;B VALUES AFTER SWAPPING"/>
+            <output expression="&quot;THE NEW VALUE OF A IS&quot;&amp;A" newline="True"/>
+            <output expression="&quot;THE NEW VALUE OF B IS&quot;&amp;B" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

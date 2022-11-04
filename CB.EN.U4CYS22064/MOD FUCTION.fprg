@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22064"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 10:45:51 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzEwOjI5OjIyIEFNOzMwNTA="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzEwOjQ1OjUxIEFNOzE7MzE1OA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="A, B, C, D" type="Integer" array="False" size=""/>
+            <comment text="DECLARING THE DIVIDEND"/>
+            <output expression="&quot;ENTER THE DIVIDEND&quot;" newline="True"/>
+            <input variable="B"/>
+            <comment text="DECLARING THE DIVISOR"/>
+            <output expression="&quot;ENTER THE DIVISIOR&quot;" newline="True"/>
+            <input variable="A"/>
+            <comment text="APPLYING MOD FORMULAE"/>
+            <assign variable="D" expression="A/B"/>
+            <assign variable="C" expression="A-(B*D)"/>
+            <output expression="C" newline="True"/>
+            <output expression="&quot;THE MODULO VALUE&quot;&amp;C" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

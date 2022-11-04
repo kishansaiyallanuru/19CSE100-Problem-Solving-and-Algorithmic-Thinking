@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22064"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:35:29 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzA5OjMwOjQ5IEFNOzMwNTk="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzA5OjM1OjI5IEFNOzE7MzE3MA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="DECLARING THE FARENHEAT VALUE"/>
+            <declare name="F" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER FARENHEAT VALUE&quot;" newline="True"/>
+            <input variable="F"/>
+            <comment text="CALCULATING THE CELSIUS VALUE"/>
+            <declare name="C" type="Integer" array="False" size=""/>
+            <assign variable="C" expression="(F-32)*5*9"/>
+            <output expression="C" newline="True"/>
+            <output expression="&quot;THE CELSIUS VALUE&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

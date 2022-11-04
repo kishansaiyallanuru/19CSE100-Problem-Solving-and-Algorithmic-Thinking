@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22064"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-04 09:53:33 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzA5OjM2OjU5IEFNOzMwNjY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTA0OzA5OjUzOjMzIEFNOzI0OzMyMTg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="DECLARING THE X COEFFECIENT"/>
+            <declare name="b" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter b value&quot;" newline="True"/>
+            <input variable="b"/>
+            <comment text="DECLARING THE X^2 COEFFECIENT"/>
+            <declare name="a" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter a value&quot;" newline="True"/>
+            <input variable="a"/>
+            <comment text="DECLARING THE CONSTANT VALUE"/>
+            <declare name="c" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter c value&quot;" newline="True"/>
+            <input variable="c"/>
+            <comment text="USING THE FORMULAE"/>
+            <declare name="q" type="Integer" array="False" size=""/>
+            <assign variable="q" expression="((-b)+(b^2-4*a*c))/2*a"/>
+            <output expression="q" newline="True"/>
+            <output expression="&quot;here the plus value&quot;" newline="True"/>
+            <declare name="x" type="Integer" array="False" size=""/>
+            <assign variable="x" expression="((-b)-(b^2-4*a*c))/2*a"/>
+            <output expression="x" newline="True"/>
+            <output expression="&quot;here the negative value&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
