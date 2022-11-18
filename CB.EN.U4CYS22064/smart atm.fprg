@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yalla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 05:20:42 PM"/>
+        <attribute name="created" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTEtMTg7MDQ6NTI6NDUgUE07MjUwMA=="/>
+        <attribute name="edited" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTEtMTg7MDU6MjA6NDIgUE07MTsyNjAx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="accountnumber" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter your account number&quot;" newline="True"/>
+            <input variable="accountnumber"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <declare name="balance" type="Integer" array="False" size=""/>
+            <assign variable="balance" expression="2000"/>
+            <output expression="balance" newline="True"/>
+            <declare name="pinnumber" type="Integer" array="False" size=""/>
+            <assign variable="pinnumber" expression="12345"/>
+            <output expression="&quot;enter your pin number&quot;" newline="True"/>
+            <input variable="pinnumber"/>
+            <if expression="pinnumber=12345">
+                <then>
+                    <declare name="withdrawl" type="Integer" array="False" size=""/>
+                    <output expression="&quot;enter amount&quot;" newline="True"/>
+                    <input variable="withdrawl"/>
+                    <if expression="withdrawl&lt;=500">
+                        <then>
+                            <if expression="balance&gt;500">
+                                <then>
+                                    <output expression="&quot;your transaction is being processed&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;insufficient funds&quot;" newline="True"/>
+                                </else>
+                            </if>
+                            <declare name="availablebalance" type="Integer" array="False" size=""/>
+                            <assign variable="availablebalance" expression="balance-withdrawl"/>
+                            <output expression="&quot;your available balance is &quot;&amp;availablebalance" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;transaction error&quot;" newline="True"/>
+                            <call expression="main"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;incorect pin&quot;" newline="True"/>
+                    <call expression="main"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
