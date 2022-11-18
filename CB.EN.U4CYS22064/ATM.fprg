@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="CB.EN.U4CYS22064"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-11-18 11:11:52 AM"/>
+        <attribute name="created" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTE4OzA5OjI1OjAxIEFNOzMwNTY="/>
+        <attribute name="edited" value="Q0IuRU4uVTRDWVMyMjA2NDsyMDIyMjNNQVlDMDEwMTsyMDIyLTExLTE4OzExOjExOjUyIEFNOzMwOzMyMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="accountnumber" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter your account number&quot;" newline="True"/>
+            <input variable="accountnumber"/>
+            <declare name="name" type="String" array="False" size=""/>
+            <output expression="&quot;enter your name&quot;" newline="True"/>
+            <input variable="name"/>
+            <declare name="OPT1, OPT2, OPT3, OPT4" type="Integer" array="False" size=""/>
+            <output expression="&quot;ENTER YOUR OPT&quot;" newline="True"/>
+            <output expression="&quot;OPT1 WITHDRAWL&quot;&amp;&quot;OPT2 BALANCE ENQUOIRY&quot;&amp;&quot;OPT3 CHNAGE PIN&quot;&amp;&quot;OPT4 DEPOSIT&quot;" newline="True"/>
+            <declare name="OPT" type="Integer" array="False" size=""/>
+            <input variable="OPT"/>
+            <if expression="OPT=1">
+                <then>
+                    <declare name="pin" type="Integer" array="False" size=""/>
+                    <assign variable="PIN" expression="12345"/>
+                    <output expression="&quot;enter your pin&quot;" newline="True"/>
+                    <input variable="pin"/>
+                    <if expression="pin=12345">
+                        <then>
+                            <declare name="WITHDRAWL" type="Integer" array="False" size=""/>
+                            <output expression="&quot;ENTER THE AMOUNT&quot;" newline="True"/>
+                            <input variable="WITHDRAWL"/>
+                            <if expression="WITHDRAWL&gt;=2000">
+                                <then>
+                                    <declare name="BALANCE" type="Integer" array="False" size=""/>
+                                    <assign variable="BALANCE" expression="50000"/>
+                                    <output expression="&quot;tracaction is being processed&quot;" newline="True"/>
+                                    <declare name="availablebalance" type="Integer" array="False" size=""/>
+                                    <assign variable="availablebalance" expression="BALANCE-WITHDRAWL"/>
+                                    <output expression="&quot;you available balnce is&quot;" newline="True"/>
+                                    <output expression="availablebalance" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;INSUFFICIENT FUNDS&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <output expression="&quot;enter correct pin number&quot;" newline="True"/>
+                            <input variable="pin"/>
+                            <output expression="&quot;your transaction is being processed&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="OPT=2">
+                        <then>
+                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                            <assign variable="BALANCE" expression="50000"/>
+                            <output expression="BALANCE" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="OPT=3">
+                                <then>
+                                    <declare name="PINNUMBER, NEWPINNUMBER" type="Integer" array="False" size=""/>
+                                    <assign variable="PINNUMBER" expression="12345"/>
+                                    <output expression="&quot;ENTER YOUR PIN NUMBER&quot;" newline="True"/>
+                                    <input variable="PINNUMBER"/>
+                                    <output expression="&quot;ENTER THE NEW PIN NUMBER&quot;" newline="True"/>
+                                    <input variable="NEWPINNUMBER"/>
+                                    <output expression="&quot;YOUR NEW PIN NUMBER IS&quot;" newline="True"/>
+                                    <output expression="NEWPINNUMBER" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="OPT=4">
+                                        <then>
+                                            <declare name="BALANCE" type="Integer" array="False" size=""/>
+                                            <assign variable="BALANCE" expression="50000"/>
+                                            <declare name="DEPOSIT" type="Integer" array="False" size=""/>
+                                            <output expression="&quot;ENTER THE AMOUNT YOU WANTED TO DEPOSIT&quot;" newline="True"/>
+                                            <input variable="DEPOSIT"/>
+                                            <declare name="NEWBALANCE" type="Integer" array="False" size=""/>
+                                            <assign variable="NEWBALANCE" expression="BALANCE+DEPOSIT"/>
+                                            <output expression="&quot;YOUR NEW BALANCE IS&quot;" newline="True"/>
+                                            <output expression="NEWBALANCE" newline="True"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
