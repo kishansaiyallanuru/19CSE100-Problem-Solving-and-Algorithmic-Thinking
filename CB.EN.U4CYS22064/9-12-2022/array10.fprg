@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yalla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:54:48 AM"/>
+        <attribute name="created" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MDk6MTI6MTYgQU07MjQ4NQ=="/>
+        <attribute name="edited" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MDk6NTQ6NDggQU07MjsyNjA1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="number" type="Integer" array="False" size=""/>
+            <declare name="x" type="Integer" array="True" size="10"/>
+            <declare name="y" type="Integer" array="False" size=""/>
+            <for variable="number" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;enter x for number&quot;" newline="True"/>
+                <input variable="y"/>
+                <assign variable="x[number]" expression="y"/>
+            </for>
+            <output expression="&quot;array contents&quot;" newline="True"/>
+            <for variable="number" start="0" end="9" direction="inc" step="1">
+                <output expression="&quot;the array contents are&quot;&amp;x[number]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

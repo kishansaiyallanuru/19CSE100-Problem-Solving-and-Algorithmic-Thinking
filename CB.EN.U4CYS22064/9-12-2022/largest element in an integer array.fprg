@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="anura"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:25:24 PM"/>
+        <attribute name="created" value="YW51cmE7QU5VUkFHUkVERFk7MjAyMi0xMi0wOTsxMDoxNDozNiBBTTsyNjE5"/>
+        <attribute name="edited" value="YW51cmE7QU5VUkFHUkVERFk7MjAyMi0xMi0wOTsxMDoyNjozNiBBTTsxOzI3MzA="/>
+        <attribute name="edited" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MDk6MjU6MjQgUE07MjsyNjEy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="num, i, max" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the number of array&quot;" newline="True"/>
+            <input variable="num"/>
+            <declare name="a" type="Integer" array="True" size="num"/>
+            <output expression="&quot;Enter the integer&quot;" newline="True"/>
+            <comment text="as said 5 inputs are given"/>
+            <for variable="i" start="0" end="num-1" direction="inc" step="1">
+                <input variable="a[i]"/>
+            </for>
+            <comment text="assuming some value to get the max value among the 5"/>
+            <comment text="i.e the largest integer"/>
+            <assign variable="max" expression="a[0]"/>
+            <comment text="using if loop for crosschecking the output from for condition"/>
+            <for variable="i" start="1" end="num-1" direction="inc" step="1">
+                <if expression="max&lt;a[i]">
+                    <then>
+                        <assign variable="max" expression="a[i]"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <comment text="printing the largest value among the 5"/>
+            <output expression="&quot;The greatest element is&quot; &amp;max" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

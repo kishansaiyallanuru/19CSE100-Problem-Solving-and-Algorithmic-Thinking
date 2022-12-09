@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="yalla"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-12-09 09:06:52 PM"/>
+        <attribute name="created" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MTA6NDE6NTggQU07MjQ4NQ=="/>
+        <attribute name="edited" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MTE6MTM6MDcgQU07MjtIUDtERVNLVE9QLUwzUkRFS0Y7MjAyMi0xMi0wOTswOTozOTowMiBBTTttYXJrcy5mcHJnOzYyMjE="/>
+        <attribute name="edited" value="eWFsbGE7S0lTSEFOX1BDOzIwMjItMTItMDk7MDk6MDY6NTIgUE07MjQ7MjY2NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <output expression="&quot;enter the number of students&quot;" newline="True"/>
+            <input variable="n"/>
+            <comment text="declaring required inputs and outputs"/>
+            <declare name="maths, physics, chemistry, english, psat, rollnumber, total, average" type="Integer" array="True" size="n"/>
+            <declare name="z, input" type="Integer" array="False" size=""/>
+            <comment text="using forloop"/>
+            <for variable="z" start="0" end="n-1" direction="inc" step="1">
+                <comment text="asking details about required subjects and marks"/>
+                <output expression="&quot;enter roll number of student&quot;&amp;z+1" newline="True"/>
+                <input variable="input"/>
+                <assign variable="rollnumber[z]" expression="input"/>
+                <output expression="&quot;enter maths marks&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="maths[z]" expression="input"/>
+                <output expression="&quot;enter physics marks&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="physics[z]" expression="input"/>
+                <output expression="&quot;enter chemistry marks&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="chemistry[z]" expression="input"/>
+                <output expression="&quot;enter english marks&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="english[z]" expression="input"/>
+                <output expression="&quot;enter psat marks&quot;" newline="True"/>
+                <input variable="input"/>
+                <assign variable="psat[z]" expression="input"/>
+                <comment text="assigning average and total marks"/>
+                <assign variable="total[z]" expression="maths[z]+physics[z]+chemistry[z]+english[z]+psat[z]"/>
+                <assign variable="average[z]" expression="total[z]/5"/>
+            </for>
+            <for variable="z" start="0" end="n-1" direction="inc" step="1">
+                <comment text="giving output of the details given and calculated values of student marks and subjected"/>
+                <output expression="&quot;Roll number of the student :&quot;&amp;rollnumber[z]" newline="True"/>
+                <output expression="&quot;Marks of the student :&quot;&amp;maths[z]&amp;&quot;, &quot;&amp;physics[z]&amp;&quot;, &quot;&amp;chemistry[z]&amp;&quot;, &quot;&amp;english[z]&amp;&quot;, &quot;&amp;psat[z]" newline="True"/>
+                <output expression="&quot;total marks of the student :&quot;&amp;total[z]" newline="True"/>
+                <output expression="&quot;Average marks of the student :&quot;&amp;average[z]" newline="True"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
